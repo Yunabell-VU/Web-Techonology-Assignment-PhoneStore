@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Documentation</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Techonology Assignment by Yu Chen and Changyu Nie from CS-Lab66">
+    <style type="text/css">
+        body {
+            margin-left: 10%;
+        }
+        hr {
+            width: 85%;
+            margin-left: 0;
+        }
+        h4 {
+            text-decoration: underline;
+        }
+        table {
+            border: 1px solid #a0a0a0;
+            width: 70%;
+            text-align: left;
+        }
+        th {
+            text-align: center;
+            background: #d6d5d5;
+        }
+        td {
+            border: 1px solid #a0a0a0;
+            width: 200px;
+        }
+        pre {
+            width: 85%;
+            background: #eaf4f8;
+            color: #c02020
+        }
+        #http_type {
+            background: #d4eaf8;
+            width: 8%;
+            text-align: center;
+            color: #c02020;
+            border: 1px solid #c02020;
+        }
+        .error{
+           width:50px;
+           text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Server Documentation - A RESTful HTTP API</h1>
+
+    <p>
+        This is the documentation for a RESTful HTTP API server create by Lab 66.<br><br>
+        The server codes with Node.js and provides web clients with 6 operations: CRUD and reset.
+    </p>
+    <h2>Port</h2>
+    <p>
+        Port of the server is: <strong>3000</strong><br><br>
+        Root path displays basic information of the server.<br>
+        <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>
+    </p>
+
+    <h2>API</h2>
+    <p>This server uses RESTful API style, which means it provides with a stateless, uniform, on-demand, URI-based data
+        source<br>
+        and representing entities in JSON standard format. <br><br>
+        Operations/routes which can be implemented are following:
+    </p>
+
+    <table>
+
+        <tr>
+            <th>Operation</th>
+            <th>HTTP Method</th>
+            <th>Route/endpoint</th>
+        </tr>
+        <tr>
+            <td><a href="#list_all">Get a list of all items</a></td>
+            <td>GET</td>
+            <td>/list</td>
+        </tr>
+        <tr>
+            <td><a href="#list_by_id">Get a single item by id</a></td>
+            <td>GET</td>
+            <td>/list/{id}</td>
+        </tr>
+        <tr>
+            <td><a href="#create">Create a new item</a></td>
+            <td>POST</td>
+            <td>/create</td>
+        </tr>
+        <tr>
+            <td><a href="#update">Update an existing item</a></td>
+            <td>PATCH</td>
+            <td>/update/{id}</td>
+        </tr>
+        <tr>
+            <td><a href="#delete">Delete an existing item</a></td>
+            <td>DELETE</td>
+            <td>/delete/{id}</td>
+        </tr>
+        <tr>
+            <td><a href="#reset">Reset database</a></td>
+            <td>GET</td>
+            <td>/reset</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3 id="list_all">1. Get items</h3>
+    <p>List all items in the database.</p>
+    <h4>Parameters</h4>
+    <p>None</p>
+    <h4>Example Request</h4>
+    <p id="http_type">HTTP: GET</p>
+    <a href="http://localhost:3000/list">http://localhost:3000/list</a>
+    <h4>Example Response</h4>
+    <pre>
+    [{
+        "id": 1,
+        "brand": "Fairphone",
+        "model": "FP3",
+        "os": "Android",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg",
+        "screensize": 5.65
+    },
+    {
+        "id": 2,
+        "brand": "Fuawei",
+        "model": "F20",
+        "os": "Fandroid",
+        "image": "https://s2.ax1x.com/2020/01/07/lcmwtI.jpg",
+        "screensize": 7
+    }]
+    </pre>
+
+    <hr>
+    <h3 id="list_by_id">2. Get a specific item by id</h3>
+    <p>Return one item specified using id.</p>
+    <h4>Parameters</h4>
+    <p>None</p>
+    <h4>Example Request</h4>
+    <p id="http_type">HTTP: GET</p>
+    <a href="http://localhost:3000/list/2">http://localhost:3000/list/2</a>
+    <h4>Example Response</h4>
+
+    <pre>
+        [{
+            "id": 2,
+            "brand": "Fuawei",
+            "model": "F20",
+            "os": "Fandroid",
+            "image": "https://s2.ax1x.com/2020/01/07/lcmwtI.jpg",
+            "screensize": 7
+        }]   
+    </pre>
+
+    <hr>
+    <h3 id="create">3. Create an item</h3>
+    <p>Add a new item into the database. Requirement data type must be JSON.</p>
+    <h4>Parameters</h4>
+    <p>A JSON type data with five contents must be included using exactly the same <em>name</em> as following:</p>
+    <ul>
+        <li>brand</li>
+        <li>model</li>
+        <li>os</li>
+        <li>image</li>
+        <li>screensize</li>
+    </ul>
+    <h4>Example Request</h4>
+    <p id="http_type">HTTP: POST</p>
+    <a href="http://localhost:3000/create">http://localhost:3000/create</a>
+    <h4>Example Response</h4>
+
+    <pre>
+        {
+            "message": "New data created",
+            "data": {
+                "brand": "LittleMi",
+                "model": "Bluemi",
+                "os": "Midroid",
+                "image": "https://s2.ax1x.com/2020/01/07/lcmwtI.jpg",
+                "screensize": 6
+            },
+            "id": 9
+        }
+    </pre>
+
+    <hr>
+    <h3 id="update">4. Update an item</h3>
+    <p>Edit an item selected by id. Original JSON data of the item would be replaced by new data.</p>
+    <h4>Parameters</h4>
+    <p>Similar to "Create" operation. A JSON type data with five contents must be included using exactly the same
+        <em>name</em> as following:</p>
+    <ul>
+        <li>brand</li>
+        <li>model</li>
+        <li>os</li>
+        <li>image</li>
+        <li>screensize</li>
+    </ul>
+    <h4>Example Request</h4>
+    <p id="http_type">HTTP: PATCH</p>
+    <a href="http://localhost:3000/update/2">http://localhost:3000/update/2</a>
+    <h4>Example Response</h4>
+    <pre>
+        {
+            "message": "id: 2 updated",
+            "data": {
+                "brand": "BigMi",
+                "model": "Greenmi",
+                "os": "Midroid",
+                "image": "https://s2.ax1x.com/2020/01/07/lcmwtI.jpg",
+                "screensize": 6
+            }
+        }
+    </pre>
+
+    <hr>
+    <h3 id="delete">5. Delete an item</h3>
+    <p>Delete an item from database. Item can be selected by id.</p>
+    <h4>Parameters</h4>
+    <p>None</p>
+    <h4>Example Request</h4>
+    <p id="http_type">HTTP: DELETE</p>
+    <a href="http://localhost:3000/delete/2">http://localhost:3000/delete/2</a>
+    <h4>Example Response</h4>
+    <pre>
+        {
+            "message": "id: 2 deleted"
+        }
+    </pre>
+
+    <hr>
+    <h3 id="reset">6. Reset</h3>
+    <p>Reset database. All existing data would be replaced by the example data.</p>
+    <h4>Parameters</h4>
+    <p>None</p>
+    <h4>Example Request</h4>
+    <p id="http_type">HTTP: GET</p>
+    <a href="http://localhost:3000/reset">http://localhost:3000/reset</a>
+    <h4>Example Response</h4>
+    <pre>
+        {
+            "success": "reset database success"
+        }
+    </pre>
+    <hr>
+
+    <h2>Response Status Codes</h2>
+    <table>
+        <tr>
+            <th class="error">Status Code</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td class="error">200</td>
+            <td>OK - The request has succeeded. Results can be read the results of response.</td>
+        </tr>
+        <tr>
+            <td class="error">400</td>
+            <td>Bad Request - The request could not be understood by the server due to malformed syntax.</td>
+        </tr>
+        <tr>
+            <td class="error">404</td>
+            <td>Not Found - The requested resource could not be found. This error may due to incorrect endpoint or incorrect HTTP method. </td>
+        </tr>
+        <tr>
+            <td class="error">500</td>
+            <td>Internal Server Error - All errors cannot be recognized.</td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

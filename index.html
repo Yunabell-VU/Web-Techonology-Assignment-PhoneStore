@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lab66 - smartphone web shop</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Techonology Assignment by Yu Chen and Changyu Nie from CS-Lab66">
+    <link rel="stylesheet" type="text/css" media="screen" href="Screen.css">
+    <link rel="stylesheet" type="text/css" media="print" href="Print.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.min.js"></script>
+    <script src="Script.js" async></script>
+
+</head>
+
+<body>
+    <header>
+        <!--Information in the header include logo, search bar, shopping cart, login-->
+        <div id="page_top" class="headbackground orange_b">
+            <div class="central">
+                <div class="search_bar">
+                    <input type="text" name="search" class="search-input" placeholder="search...">
+                    <button class="search_button background_image" type="submit"></button>
+                </div>
+                <div class="header_logo white_f">
+                    <span id="logo">Lab 66</span>
+                </div>
+                <div class="header_icon">
+                    <a href="#" class="shopping_cart background_image" title="shopping cart"></a>
+                    <a href="#" class="login background_image" title="login"></a>
+                </div>
+            </div>
+        </div>
+
+        <!--navigations-->
+        <div class="navigation-bar">
+            <nav class="navi-items central orange_f">
+                <a href="#hot_sellings">Hot</a>
+                <a href="#sales">Sales</a>
+                <a href="#services">Services</a>
+                <a href="#contacts">Contacts</a>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <!--ranking in 2019-->
+        <div class="ranking_bar central orange_f">
+            <span><b>Ranking 2019</b></span>
+        </div>
+
+        <div class="advertisement central">
+            <div class="ranking_list">
+                <ol id="ranking">
+                    <li>Apple iPhone XR</li>
+                    <li>Apple iPhone Xs Max</li>
+                    <li>Xiaomi Redmi Note 7 Series</li>
+                    <li>Apple iPhone Xs</li>
+                    <li>Huawei P30 Series</li>
+                    <li>Huawei Mate 20 Series</li>
+                    <li>Samsung Galaxy S10/S10+/S10e</li>
+                    <li>Samsung Galaxy A10</li>
+                    <li>Samsung Galaxy A50</li>
+                    <li>Apple iPhone 8</li>
+                </ol>
+            </div>
+
+            <!--advertisements show-->
+            <div class="slides_show">
+                <div class="slides">
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <figure class="slide s1">
+                        <figcaption>Honor 20i</figcaption>
+                        <a href="#"><img src="https://s2.ax1x.com/2020/01/09/lW0TSI.md.png" alt="honor_poster" /></a>
+                    </figure>
+                    <figure class="slide s2">
+                        <figcaption>OnePlus 7 Pro</figcaption>
+                        <a href="#"><img src="https://s2.ax1x.com/2020/01/09/lWraef.md.png" alt="oneplus_poster" /></a>
+                    </figure>
+                </div>
+                <div class="slides_navi">
+                    <label for="r1" class="slide_bar s_bar1 background_image"></label>
+                    <label for="r2" class="slide_bar s_bar2 background_image"></label>
+                </div>
+            </div>
+        </div>
+
+        <!--top sellings in shop-->
+        <div id="hot_sellings" class="best-selling central">
+            <div class="banner orange_b white_f">
+                <span>Top-Selling Phones</span>
+            </div>
+            <form id="bestSells" action="http://localhost:3000/create" target="_blank" method="post">
+                <table id="topsellingTable" class="tablesorter">
+                    <div id="current_time"></div>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th class="sortable">Brand</th>
+                            <th>Model</th>
+                            <th class="sortable"><abbr title="Operating System">OS</abbr></thclass="sortable">
+                            <th class="sortable">Screensize</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableData">
+                        <tr class="topselling_adding" id="formInput">
+                            <td><label for="image"></label>
+                                <span>*</span><input type="text" id="image" name="image" required
+                                    placeholder="image(URLs only)"></td>
+                            <td><label for="brand"></label>
+                                <span>*</span> <input type="text" name="brand" id="brand" placeholder="brand" required>
+                            </td>
+                            <td><label for="model"></label>
+                                <span>*</span> <input type="text" id="model" name="model" placeholder="model" required>
+                            </td>
+                            <td><label for="os"></label>
+                                <span>*</span> <input type="text" id="os" name="os" placeholder="OS" required></td>
+                            <td><label for="screensize"></label>
+                                <span>*</span> <input type="number" id="screensize" name="screensize" min="1" max="100"
+                                    required>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <input class="orange_b white_f" id="ajaxReset" type="button" value="Reset" />
+                <input class="topselling_submit orange_b white_f" id="ajaxSubmit" type="submit" value="Submit">
+            </form>
+            <div></div>
+            <form action="http://localhost:3000/list" method="post">
+                <h1 class = "orange_f" id="database_title">What's in Server Database: </h1>
+                <ul id="addinfo">
+                    loading JSON data...
+                </ul>
+            </form>
+        </div>
+
+        <!--sales products-->
+        <div id="sales" class="banner central orange_b white_f">
+            <span>Up to 50% OFF</span>
+        </div>
+
+        <div class="sales central">
+            <table id="salesTable" class="tablesorter">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th class="sortable">Brand (sort)</th>
+                        <th>Model</th>
+                        <th class="sortable">Memory Size (sort)</th>
+                        <th class="sortable">Price (sort)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://s2.ax1x.com/2020/01/09/lflCRg.jpg" alt="SG_A50" /></td>
+                        <td>Samsung</td>
+                        <td> Galaxy A50 </td>
+                        <td>128 GB</td>
+                        <td class="price">&euro; 269</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://s2.ax1x.com/2020/01/09/lflgFf.jpg" alt="SG_A40" /></td>
+                        <td>Samsung</td>
+                        <td>Galaxy A40</td>
+                        <td>64 GB</td>
+                        <td class="price">&euro; 205</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://s2.ax1x.com/2020/01/09/lflTwq.jpg" alt="iPhone 11" /></td>
+                        <td>Apple</td>
+                        <td>iPhone 11</td>
+                        <td>64 GB</td>
+                        <td class="price">&euro; 784</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://s2.ax1x.com/2020/01/09/lf1p01.jpg" alt="huaweiP30" /></td>
+                        <td>Huawei</td>
+                        <td>P30 lite </td>
+                        <td>128 GB</td>
+                        <td class="price">&euro; 244</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://s2.ax1x.com/2020/01/09/lf1Qtf.jpg" alt="SG_S10e" /></td>
+                        <td>Samsung</td>
+                        <td>Galaxy S10e</td>
+                        <td>128 GB</td>
+                        <td class="price">&euro; 497</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://s2.ax1x.com/2020/01/09/lf1bDA.jpg" alt="SG_A20e" /></td>
+                        <td>Samsung</td>
+                        <td>Galaxy A20e</td>
+                        <td>32 GB</td>
+                        <td class="price">&euro; 157</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--services-->
+        <div id="services" class="services central">
+            <h1 class="orange_f">Our Services</h1>
+            <div class="service_slides orange_b">
+                <ul>
+                    <li id="order_pay">
+                        <div class="service_content">
+                            <dl>
+                                <dt>To Order</dt>
+                                <dd>You can add your services to your shopping basket by clicking on the 'add' or
+                                    'order' button.
+                                    These services are then in the shopping basket.
+                                </dd>
+                                <dt>Payment Options</dt>
+                                <dd>You can pay for your product (s) online with <em>iDeal</em>, <em>PayPal</em> and a
+                                    <em>credit card</em> (Visa,
+                                    Mastercard and American Express). </dd>
+                            </dl>
+                        </div>
+                        <div class="service_title orange_b">
+                            <div class="icon_order icon background_image"></div>
+                            <div class="text">
+                                <p>Order</p>
+                                <p>Pay</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="deliver_pickup">
+                        <div class="service_content">
+                            <dl>
+                                <dt>To Deliver</dt>
+                                <dd>You can have your order delivered to the address you specified.
+                                    You will receive an email with a shipping confirmation as soon as your package has
+                                    left
+                                    our warehouse.</dd>
+                                <dt>Picking up at the store</dt>
+                                <dd>You can pick up your order in one of our stores.</dd>
+                            </dl>
+                        </div>
+                        <div class="service_title">
+                            <div class="icon_deliver icon background_image"></div>
+                            <div class="text">
+                                <p>Deliver</p>
+                                <p>Pickup</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="repair">
+                        <div class="service_content">
+                            <dl>
+                                <dt>Guarantee</dt>
+                                <dd>The exact duration of the warranty on a product is specified by the manufacturer or
+                                    importer. If a product breaks down within this warranty period, we will try to
+                                    repair or
+                                    replace it free of charge.</dd>
+                                <dt>Repaires</dt>
+                                <dd>It is possible to offer a defective product for repair in one of our stores
+                            </dl>
+                        </div>
+                        <div class="service_title">
+                            <div class="icon_repair icon background_image"></div>
+                            <div class="text">
+                                <p>Repair</p>
+                                <p>Warranty</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="return_policy">
+                        <div class="service_content">
+                            <dl>
+                                <dt>How to return a product</dt>
+                                <dd>All products purchased from our store in the Netherlands can be returned within
+                                    <strong>100
+                                        days</strong>.
+                                    You return a product in new condition, complete and, if reasonably possible, in the
+                                    original packaging. We request that you return the product in such a way that we can
+                                    give the product a second life through our services. In this way we contribute to
+                                    the
+                                    sustainable use of consumer electronics.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="service_title">
+                            <div class="icon_return icon background_image"></div>
+                            <div class="text">
+                                <p>Return</p>
+                                <p>Policy</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="top_navi" id="orphans">
+            <a href="#page_top">TOP</a>
+        </nav>
+
+        <div class="information_bar">
+            <div class="information central">
+                <figure class="footer_logo background_image"></figure>
+                <section id="contacts" class="contact-info white_f">
+                    <h2>Contact Us</h2>
+                    <address>
+                        <p>
+                            De Boelelaan 1105<br>
+                            1081 HV Amsterdam<br>
+                            Netherlands
+                        </p>
+                        <p>Tel: 0619323849</p>
+                        <p>Email: 2668777@student.vu.nl</p>
+                    </address>
+                </section>
+                <div class="social_media">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="twitter background_image" title="twitter"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="facebook background_image" title="facebook"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="instagram background_image" title="instagram"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p id="copyright">
+            &copy; 2020 Web Techonology CS-Lab 66
+        </p>
+        <section id="about_us">
+            <h1>About Us</h1>
+            <h2>Quid enim de amicitia statueris utilitatis causa expetenda vides.</h2>
+            <pre>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Multoque hoc melius nos veriusque quam Stoici. Explanetur igitur. 
+Bonum liberi: misera orbitas. Sed in rebus apertissimis nimium longi sumus. 
+Duo Reges: constructio interrete. Neutrum vero, inquit ille.
+
+Explanetur igitur. 
+Itaque contra est, ac dicitis; 
+Ita ne hoc quidem modo paria peccata sunt. 
+Nam de isto magna dissensio est. Nos commodius agimus. 
+Contineo me ab exemplis. Immo videri fortasse. Deinde disputat, 
+quod cuiusque generis animantium statui deceat extremum. In schola desinis.
+
+</pre>
+            <h2>Stuprata per vim Lucretia a regis filio testata civis se ipsa interemit.</h2>
+            <pre>
+
+Ita relinquet duas, de quibus etiam atque etiam consideret. 
+Nescio quo modo praetervolavit oratio. Sed quod proximum fuit non vidit. Negat esse eam, 
+inquit, propter se expetendam.
+
+Zeno autem, quod suam, quod propriam speciem habeat, cur
+appetendum sit, id solum bonum appellat, beatam autem vitam
+eam solam, quae cum virtute degatur.
+                
+In his igitur partibus duabus nihil erat, quod Zeno
+commutare gestiret.  
+            </pre>
+        </section>
+
+        <section id="compatibility">
+            <h1>Compatibility</h1>
+            <p>This stylesheet is designed based on Chrome.<br>
+                For other browsers, there are several differences in terms of visual effects.<br>
+                For example, in Safari, the font-monospace for #logo can't display as expected,
+                a better way to deal with this is to change logo into a picture or choose another font.<br>
+                Another difference we observed between browsers is the border of rows in table.
+                Chrome can display border effect correctly in terms of row by row,
+                however, in IE, it displays borders of every td which should be tr
+                and in Safari, it simply hidden the border.
+                We haven't found out the solution yet.</p>
+        </section>
+    </footer>
+</body>
+
+</html>

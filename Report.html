@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Webpage Evaluation - Group66</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            border: 1px solid #9CF;
+            text-align: left;
+        }
+        table thead td,table th {
+            font-weight: bold;
+            background-color: #EAF2D3;
+            text-align: center;
+        }
+        table tr:nth-child(even) {
+            background-color: white;
+        }
+        table td,table th {
+            border: 1px solid #C3C3C3;
+            text-align: left;
+        }
+        #improvement_plan th {text-align: center;}
+        .green {background-color: #EAF2D3;}
+
+     .grey {background-color: #C3C3C3;}
+    </style>
+</head>
+
+<body>
+    <section id="font_matter">
+        <h1>Web site evaluation</h1>
+        <p>Conducted by Group 66: Yu Chen, Changyu Nie</p>
+        <p>For VU Web Technology Assignment 4</p>
+        <p>January 29th, 2020</p>
+    </section>
+    <hr>
+    <section id="Introduction">
+        <h2>Introduction</h2>
+        <p>
+            As for accessibility,  we implement text alternatives for every functionality involved in the webshop index page, which means the page is adaptable for different screens and media, and  a wider range of people with disabilities. Besides, we implement html and CSS properly so that the content and visual layout of web page could be modified respectively and independently, which means the well-constructed web page in html could keep its correct structure while developing adaption details for people with disabilities.</br>
+            As for usability, our web page is vivid and client-friendly. We use CSS to implement decorative colors and pictures to distinguish different functional parts of our index page and use Javascript to implement useful interactives.</br>
+        </p>
+    </section>
+<hr>
+    <section id="Accessibility highlights">
+        <h2>Accessibility highlights</h2>
+        <p>
+            We identify the Guideline 1.3, Adaptable, Guideline 1.4, Distinguishable, and Guideline 2.4, Navigable, to be the most relevant WCAG guidelines to our page.</br>
+            Firstly, it is because our page presents elements that are in text format mostly and has just a few non-text content, which means that we are not able to implement Guideline 1.1 about text alternatives to our page significantly although we did it well in alt attributes in img elements, the only part requiring text alternatives. Besides, we did not work much on keyboard accessibility and we just kept its default settings without operating redundant or wrong modifications. And it just worked very well for we could access every functionality we designed for our page. </br>
+            Then come the most relevant three guidelines. For 1.3 Adaptable, which includes information, structure, and relationships among elements, as well as meaningful sequence, it is the part that we did a lot of hard-working on. We discussed hours and drafted several versions of web design to determine the content of text information, the structure and proper order of our data and relationships between parts and parts to connect the full page thoroughly as a whole. For 1.4 Distinguishable, we wrote over 700 lines of CSS codes to implement our creativity and imagination as if we were real owners of a webshop, which was commented as too extreme in Assignment 1 and we have improved it in this Assignment 4 with 400+ lines, keeping the vivid and clear visual experience of our page,  instead of the previous 700 lines. For Guideline 2.4 Navigable, we implemented navigation bars leading to different sections of our webshop, picture sliding navigation boxes, in-page jumps that combine various sections together as a integrated real page with totally new inspiring motivations.
+
+        </p>
+    </section>
+<hr>
+    <section id="improvement_plan">
+        <h2>Improvement Plan</h2>
+        <h3>1. Accessibility and Usability</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Terms</th>
+                    <th>Parts</th>
+                    <th>Description</th>
+                    <th>Implementation</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Improve accessibility to non-text Content</td>
+                    <td>HTML/CSS</td>
+                    <td>Add text to icons which do not have description. Icons include: "Shopping Cart", "Login",
+                        "Twitter",
+                        "Instagram", "Facebook"</td>
+                    <td>We add &lt;title&gt; attribute to every icon,
+                        so that when a user move the cursor over the icon, description of the icon would display </td>
+                </tr>
+                <tr>
+                    <td>Improve adaptability of information</td>
+                    <td>HTML/CSS</td>
+                    <td>Inform user required input fields in the form.</td>
+                    <td>We add asterisk character '*' in front of inputs of the form in HTML and set the color to red in
+                        CSS.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2. Course learning goals</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Terms</th>
+                    <th>Parts</th>
+                    <th>Description</th>
+                    <th>Implementation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Improve inappropriate use of h1, h2 and &lt;pre&gt;</td>
+                    <td>HTML</td>
+                    <td>Add text content which can use h1, h2 and &lt;pre&gt; appropriately and suitable.</td>
+                    <td>Add a new section called "About us" and filled in text content from paragraphs generated by
+                        "Lorem
+                        ipsum".</td>
+                </tr>
+                <tr>
+                    <td>Improve input type</td>
+                    <td>HTML</td>
+                    <td>Form input for "brand" was originally used the type "selection" which should be changed into
+                        textbox.</td>
+                    <td>Input boxes were uniformed into textbox except the box for "screensize", which has the input
+                        type
+                        number.</td>
+                </tr>
+                <tr>
+                    <td>Improve missing tags</td>
+                    <td>CSS</td>
+                    <td>Missing tags in terms of
+                        border-color,
+                        border-width,
+                        orphans,
+                        vertical-align,
+                        widows
+                        need to be added</td>
+                    <td>'border-color','border-width' and 'vertical-align' were added into Screen.css and 'orphans',
+                        'widow'
+                        were added to
+                        Print.css to improve print style.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Improve print style</td>
+                    <td>CSS</td>
+                    <td>Hide form input.</td>
+                    <td>Input part include two buttons (reset and submit) were set visibility to 'hidden' in Print
+                        style.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Improve responsive design</td>
+                    <td>CSS</td>
+                    <td>Change font size to relatively larger on small devices. Improve navigation bar.</td>
+                    <td>Font size for text, navigation and also placeholder for input boxes were improved to larger
+                        size.
+                        Readability of the webpage on small devices
+                        improved significantly. What we didn't manage to do is the part of &lt;pre&gt; text. We couldn't find a way to change the font size of pre text.
+                        It seems Jquery can manage this problem but unfortunately we didn't find the solution.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Shorten length of stylesheet</td>
+                    <td>CSS</td>
+                    <td>Reconstructure CSS and shorten the length of the stylesheet</td>
+                    <td>The length of the stylesheet was too long. After applied functions for Assignment2, the total
+                        lenght
+                        of the stylesheet became 720 lines.
+                        Our goal is to shorten the length of the file without losing any styles of the webpage. To
+                        achieve
+                        this, we classified different contents with same attributes,
+                        for example, text with white color, background with orange color and so on. So we can gave them
+                        the
+                        same class name and don't need to duplicate the style code.
+                        Also, we unified the style of two tables, banners, buttons and etc. We successfully compressed the code with 500 lines.
+                        For the slides and
+                        "services"
+                        fancy part, it seems using JavaScript instead of pure css may achieve
+                        better performance and less sloppy, however we didn't manage to do that because of lack of time.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+    <h2>Appendix A</h2>
+    <table>
+        <caption>Appendix A</caption>
+        <tr>
+            <td class="green"><b>Principle 1: Perceivable - Information and user interface components must be
+                    presentable to users in ways they can perceive.</b></td>
+        </tr>
+        <tr>
+            <td class="grey"><b>Guideline 1.1 Text Alternatives</b></td>
+        </tr>
+        <tr>
+            <td>
+                We partially comply to guideline 1.1 about text alternatives of non-text content, because our page was
+                not complicated enough to apply most of the situations listed in WCAG2.0. </br>
+                As for setting alternatives in img elements and using CSS for decorative elements, we succeed to comply
+                to the guideline. Alt attributes in img elements allow the page to present a text description of picture
+                when the image not loaded successfully. When we design a web page, we must consider as many particular
+                situations as possible, network connection is a quite common concern when we think about web page or
+                internet transmission, the alt attributes offer us one of solutions for this situation. Using CSS for
+                decorative elements also benefits a lot on web design because as technology evolves, a web page should
+                be displayed properly on different sizes of screens and other formats of different media with various
+                purposes, which requires web designer separate the content and the decoration to realise the functions
+                mentioned above. That’s the reason we use CSS for decorative elements.</br>
+                However, the rest lines of guideline 1.1 do not apply to our web page because we just designed a concise
+                index page of a online phone shop and aspects of controls, time-based media, tests, sensory and CAPTCHA,
+                which are realised by Flash, Silverlight, PDF and so on, are not necessary for our page. In addition, we
+                just involved few non-text contents in our web page which made us have no needs to use tools listed in
+                the guideline to get access to non-text contents. We should keep our codes simple and readable while
+                sufficient so we just use methods suitable for us.
+            </td>
+        </tr>
+        <tr>
+            <td class="grey"><b>Guideline 1.3 Adaptable</b></td>
+        </tr>
+        <tr>
+            <td>
+                We comply to guideline 1.3 at several aspects, such as using id, table, header, semantic element, text
+                formatting, etc. The contents displayed with different colors always accompanied with id attributes or
+                semantic elements to indicate its structure or relations with other elements. And we use table and list
+                to present contents with meaningful sequences so that they can be fixed in required order for all
+                adaption.</br>
+                However, guidelines about color distinguishing do not apply to our page, because we did not use color,
+                sound or any sensory elements to transfer information. Colors are just decorative elements in our case.
+
+            </td>
+        </tr>
+        <tr>
+            <td class="grey"><b>Guideline 1.4 Distinguishable</b></td>
+        </tr>
+        <tr>
+            <td>
+                We comply strictly to guideline 1.4.1 Use of Color, for our page did not use color as the only visual
+                means of conveying information, indicating an action, prompting a response, or distinguishing a visual
+                element. Color is just decorative elements for our page.</br>
+                However, guideline 1.4.2 Audio Control did not apply to our page, because we did not add any audio
+                elements to our page.
+
+            </td>
+        </tr>
+        <tr>
+            <td class="green"><b>Principle 2: Operable - User interface components and navigation must be operable.</b>
+            </td>
+        </tr>
+        <tr>
+            <td class="grey"><b>Guideline 2.1 Keyboard Accessible</b></td>
+        </tr>
+        <tr>
+            <td>
+                We successfully comply to guideline 2.1 Keyboard Accessible. All functionality of our page, including
+                input, sorting, back to top and so on, can be controlled by keyboard because we did not modify default
+                keyboard operation settings and just keep all functionality available without keyboard trap.
+
+            </td>
+        </tr>
+        <tr>
+            <td class="grey"><b>Guideline 2.4 Navigable</b></td>
+        </tr>
+        <tr>
+            <td>
+                Guideline 2.4.1, by-pass blocks, does not apply to our web page, because we only design a single page
+                and have no needs to navigate between several pages.</br>
+                We successfully comply to guideline 2.4.2 Page Titled, because our webshop page’s short title identify
+                the subject of our web page and make sense even without reading context, which is important for a online
+                shop’s index page.</br>
+                We successfully comply to guideline 2.4.3 Focus Order. Our page has a form that can be manually input,
+                whose elements will be displayed in order, when navigating, our blank input boxes are placed in right
+                order, the same as the order these information being displayed after submission.</br>
+                We successfully comply to guideline 2.4.4 Link Purpose(in Context), because all of our links occurred in
+                our codes are accompanied with accurate text description, which thoroughly indicates the purpose or the
+                destination of the link.
+
+            </td>
+        </tr>
+    </table>
+<hr>
+    <h2>Appendix B</h2>
+    <table>
+        <caption>Appendix B</caption>
+        <tr>
+            <td colspan="2" class="green"><b>Assignment 1</b></td>
+        </tr>
+        <tr>
+            <td class="grey"><b>Comments</b></td>
+            <td class="grey"><b>Indications</b></td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>HTML a: All items from Appendix 1</b></td>
+        </tr>
+        <tr>
+            <td>-2: inappropriate use of h1 and h2. They are to indicate headers, not to make text in your table larger
+                (should have used CSS for this)</td>
+            <td>a potentially negative aspect of your submission that could be used to improve the usability or
+                accessibility of your page</td>
+        </tr>
+        <tr>
+            <td>-2: inappropriate use of &lt;pre&gt;, you could have styled the address (which uses whitespace and line
+                breaks) with &lt;pre&gt;</td>
+            <td>a potentially negative aspect of your submission that could be used to improve the usability or
+                accessibility of your page</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>HTML b: Interactive form</b></td>
+        </tr>
+        <tr>
+            <td>Form works!</td>
+            <td>a technical implementation detail that has no impact on the usability or accessibility of your page</td>
+        </tr>
+        <tr>
+            <td>Please change the input for "brand" to a textbox as well. </td>
+            <td>a technical implementation detail that has no impact on the usability or accessibility of your page</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>HTML c: Validator check</b></td>
+        </tr>
+        <tr>
+            <td>OK</td>
+            <td>a technical implementation detail that has no impact on the usability or accessibility of your page</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>HTML d: Misc</b></td>
+        </tr>
+        <tr>
+            <td>Please name your ZIP file according to the assignment next time.</td>
+            <td>a technical implementation detail that has no impact on the usability or accessibility of your page</td>
+        </tr>
+        <tr>
+            <td>Correct use of HTML class and id attributes.</td>
+            <td>a positive aspect of your submission that improves usability or accessibility</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>CSS a: All items from Appendix 2</b></td>
+        </tr>
+        <tr>
+            <td>The following attributes are missing:</br>
+                - border-color</br>
+                - border-width</br>
+                - orphans</br>
+                - vertical-align</br>
+                - widows</td>
+            <td>a technical implementation detail that has no impact on the usability or accessibility of your page</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>CSS b: print style</b></td>
+        </tr>
+        <tr>
+            <td>Print style looks OK.</td>
+            <td>a technical implementation detail that has no impact on the usability or accessibility of your page</td>
+        </tr>
+        <tr>
+            <td>Form could have been set to not display.</td>
+            <td>a technical implementation detail that has no impact on the usability or accessibility of your page</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>CSS c: screen style</b></td>
+        </tr>
+        <tr>
+            <td>Screen and print styles are sufficiently different</td>
+            <td>a positive aspect of your submission that improves usability or accessibility </td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>CSS d: Responsive design</b></td>
+        </tr>
+        <tr>
+            <td>Responsive design does not look very suitable for small devices.</br>
+                Text is very small (form is even unreadable on a 320x480 pixels device).</br>
+                Navigation is too small to be used.</td>
+            <td>a potentially negative aspect of your submission that could be used to improve the usability or
+                accessibility of your page</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>CSS e: browser compatibility report</b></td>
+        </tr>
+        <tr>
+            <td>OK</td>
+            <td>a positive aspect of your submission that improves usability or accessibility</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>CSS f: Misc</b></td>
+        </tr>
+        <tr>
+            <td>700 lines of CSS is a bit too extreme for this assignment (whilst not implementing 5 CSS elements)</br>
+                @media print and @page in print style are not necessary as stylesheet is already marked as "print" in
+                HTML link.</td>
+            <td>a technical implementation detail that has no impact on the usability or accessibility of your page</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>CSS g: validator check</b></td>
+        </tr>
+        <tr>
+            <td>OK</td>
+            <td>a technical implementation detail that has no impact on the usability or accessibility of your page</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="green"><b>Assignment 2</b></td>
+        </tr>
+        <tr>
+            <td class="grey"><b>Comments</b></td>
+            <td class="grey"><b>Indications</b></td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Sortable tables</b></td>
+        </tr>
+        <tr>
+            <td>Works entirely!</td>
+            <td>a positive aspect of your submission that improves usability or accessibility</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Reset button</b></td>
+        </tr>
+        <tr>
+            <td>Works entirely!</td>
+            <td>a positive aspect of your submission that improves usability or accessibility</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Dynamic table</b></td>
+        </tr>
+        <tr>
+            <td>Works entirely!</td>
+            <td>a positive aspect of your submission that improves usability or accessibility</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Misc.</b></td>
+        </tr>
+        <tr>
+            <td>Looks very good!</br>
+                Clean and commented code.</td>
+            <td>a positive aspect of your submission that improves usability or accessibility</td>
+        </tr>
+
+    </table>
+
+ <!--   <hr>
+    <h2>Details of Appendix A</h2>
+    <table>
+        <caption>Appendix A</caption>
+        <tr>
+            <td colspan="3" class="green"><b>Principle 1: Perceivable - Information and user interface components must be presentable
+                    to users in ways they can perceive.</b></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="grey"><b>Guideline 1.1 – Text Alternatives</b></td>
+        </tr>
+        <tr>
+            <td colspan="3"><b>1.1.1 Non-text Content - Level A</b></td>
+        </tr>
+
+
+        <tr>
+            <td rowspan="15">Situation A</td>
+            <td colspan="2"><b>Situation A: If a short description can serve the same purpose and present the same
+                    information as the non-text content:</b></td>
+        </tr>
+        <tr>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>ARIA6: Using aria-label to provide labels for objects</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention aria-label, which is used to
+                define a string (not visible) that labels the current element, and we did not realise it back then.</td>
+        </tr>
+        <tr>
+            <td>ARIA10: Using aria-labelledby to provide a text alternative for non-text content</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention aria-labelledby, which is used to
+                establishes relationships between objects and their label(s) by using visible text(s), and we did not
+                realise it back then.</td>
+        </tr>
+        <tr>
+            <td>G196: Using a text alternative on one item within a group of images that describes all items in the
+                group</td>
+            <td>Fail to comply. Because we did not use a grouping of adjacent duplicated images.</td>
+        </tr>
+        <tr>
+            <td>FLASH1: Setting the name property for a non-text object</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention applying a textual alternative for
+                a symbol by using The Flash Professional authoring tool's Accessibility panel and we did not realise it
+                back then.</td>
+        </tr>
+        <tr>
+            <td>FLASH5: Combining adjacent image and text buttons for the same resource</td>
+            <td>Fail to comply. Because a single button was enough for us, we did not use combined buttons with images
+                and texts.</td>
+        </tr>
+        <tr>
+            <td>FLASH28: Providing text alternatives for ASCII art, emoticons, and leetspeak in Flash</td>
+            <td>Not apply to our page. Because we ran a online phone shop and it is unnecssary to insert ASCII art,
+                emoticons and leetspeak in a business index page.</td>
+        </tr>
+        <tr>
+            <td>H2: Combining adjacent image and text links for the same resource</td>
+            <td>Fail to comply. Because we apply image and text in CSS and HTML respectively, we did not include them in
+                one link.</td>
+        </tr>
+        <tr>
+            <td>H35: Providing text alternatives on applet elements</td>
+            <td>Fail to comply. Because we did not use any Java applets in our html web page.</td>
+        </tr>
+        <tr>
+            <td>H37: Using alt attributes on img elements</td>
+            <td>Comply. Because we need alt attributes to present information of images when images are not loaded
+                successfully. </td>
+        </tr>
+        <tr>
+            <td>H53: Using the body of the object element</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention object labels and we did not
+                realise it back then.</td>
+        </tr>
+        <tr>
+            <td>H86: Providing text alternatives for ASCII art, emoticons, and leetspeak</td>
+            <td>Not apply to our page. Because we ran a online phone shop and it is unnecssary to insert ASCII art,
+                emoticons and leetspeak in a business index page.</td>
+        </tr>
+        <tr>
+            <td>PDF1: Applying text alternatives to images with the Alt entry in PDF documents</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention Alt entry in PDF documents and we
+                did not realise it back then.</td>
+        </tr>
+        <tr>
+            <td>SL5: Defining a Focusable Image Class for Silverlight</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for Focusable Image Class for
+                Silverlight and we did not realise it back then.</td>
+        </tr>
+
+
+        <tr>
+            <td rowspan="27">Situation B</td>
+            <td colspan="2"><b>Situation B: If a short description can not serve the same purpose and present the same
+                    information as the non-text content (e.g., a chart or diagram):</b></td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Short text alternative techniques for Situation B:</b></td>
+        </tr>
+        <tr>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>ARIA6: Using aria-label to provide labels for objects</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention aria-label, which is used to
+                define a string (not visible) that labels the current element, and we did not realise it back then.</td>
+        </tr>
+        <tr>
+            <td>ARIA10: Using aria-labelledby to provide a text alternative for non-text content</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention aria-labelledby, which is used to
+                establishes relationships between objects and their label(s) by using visible text(s), and we did not
+                realise it back then.</td>
+        </tr>
+        <tr>
+            <td>G196: Using a text alternative on one item within a group of images that describes all items in the
+                group</td>
+            <td>Fail to comply. Because we did not use a grouping of adjacent duplicated images.</td>
+        </tr>
+        <tr>
+            <td>FLASH1: Setting the name property for a non-text object</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention applying a textual alternative for
+                a symbol by using The Flash Professional authoring tool's Accessibility panel and we did not realise it
+                back then.</td>
+        </tr>
+        <tr>
+            <td>FLASH5: Combining adjacent image and text buttons for the same resource</td>
+            <td>Fail to comply. Because a single button was enough for us, we did not use combined buttons with images
+                and texts.</td>
+        </tr>
+        <tr>
+            <td>FLASH28: Providing text alternatives for ASCII art, emoticons, and leetspeak in Flash</td>
+            <td>Not apply to our page. Because we ran a online phone shop and it is unnecssary to insert ASCII art,
+                emoticons and leetspeak in a business index page.</td>
+        </tr>
+        <tr>
+            <td>H2: Combining adjacent image and text links for the same resource</td>
+            <td>Fail to comply. Because we apply image and text in CSS and HTML respectively, we did not include them in
+                one link.</td>
+        </tr>
+        <tr>
+            <td>H35: Providing text alternatives on applet elements</td>
+            <td>Fail to comply. Because we did not use any Java applets in our html web page.</td>
+        </tr>
+        <tr>
+            <td>H37: Using alt attributes on img elements</td>
+            <td>Comply. Because we need alt attributes to present information of images when images are not loaded
+                successfully. </td>
+        </tr>
+        <tr>
+            <td>H53: Using the body of the object element</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention object labels and we did not
+                realise it back then.</td>
+        </tr>
+        <tr>
+            <td>H86: Providing text alternatives for ASCII art, emoticons, and leetspeak</td>
+            <td>Not apply to our page. Because we ran a online phone shop and it is unnecssary to insert ASCII art,
+                emoticons and leetspeak in a business index page.</td>
+        </tr>
+        <tr>
+            <td>PDF1: Applying text alternatives to images with the Alt entry in PDF documents</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention Alt entry in PDF documents and we
+                did not realise it back then.</td>
+        </tr>
+        <tr>
+            <td>SL5: Defining a Focusable Image Class for Silverlight</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for Focusable Image Class for
+                Silverlight and we did not realise it back then.</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Long text alternative techniques for Situation B:</b></td>
+        </tr>
+        <tr>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>ARIA15: Using aria-describedby to provide descriptions of images</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for aria-describedby and we did not
+                realise it back then.</td>
+        </tr>
+        <tr>
+            <td>G73: Providing a long description in another location with a link to it that is immediately adjacent to
+                the non-text content</td>
+            <td>Not apply to our page. Because we did not plot charts or diagrams requiring long description in another
+                location.</td>
+        </tr>
+        <tr>
+            <td>G74: Providing a long description in text near the non-text content, with a reference to the location of
+                the long description in the short description</td>
+            <td>Not apply to our page. Because we did not plot charts or diagrams requiring long description in another
+                location.</td>
+        </tr>
+        <tr>
+            <td>G92: Providing long description for non-text content that serves the same purpose and presents the same
+                information</td>
+            <td>Not apply to our page. Because we did not plot charts or diagrams requiring long description in another
+                location.</td>
+        </tr>
+        <tr>
+            <td>FLASH2: Setting the description property for a non-text object in Flash</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>FLASH11: Providing a longer text description of an object</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>H45: Using longdesc</td>
+            <td>Not apply to our page. Because we did not plot charts or diagrams requiring long description and we did
+                not use longdesc to link them.</td>
+        </tr>
+        <tr>
+            <td>H53: Using the body of the object element</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention object labels and we did not
+                realise it back then.</td>
+        </tr>
+        <tr>
+            <td>SL8: Displaying HelpText in Silverlight User Interfaces</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for the use of Silverlight and we did
+                not realise it back then.</td>
+        </tr>
+
+
+        <tr>
+            <td rowspan="18">Situation C</td>
+            <td colspan="2"><b>Situation C: If non-text content is a control or accepts user input:</b></td>
+        </tr>
+        <tr>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>ARIA6: Using aria-label to provide labels for objects</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention aria-label, which is used to
+                define a string (not visible) that labels the current element, and we did not realise it back then.</td>
+        </tr>
+        <tr>
+            <td>ARIA9: Using aria-labelledby to concatenate a label from several text nodes</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>FLASH6: Creating accessible hotspots using invisible buttons</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>FLASH25: Labeling a form control by setting its accessible name</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>FLASH27: Providing button labels that describe the purpose of a button</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>FLASH29: Setting the label property for form components</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>FLASH30: Specifying accessible names for image buttons</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>FLASH32: Using auto labeling to associate text labels with form controls</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>H24: Providing text alternatives for the area elements of image maps</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>H30: Providing link text that describes the purpose of a link for anchor elements</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>H36: Using alt attributes on images used as submit buttons</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>H44: Using label elements to associate text labels with form controls</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>H65: Using the title attribute to identify form controls when the label element cannot be used</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>SL18: Providing Text Equivalent for Nontext Silverlight Controls With AutomationProperties.Name</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for the use of Silverlight and we did
+                not realise it back then.</td>
+        </tr>
+        <tr>
+            <td>SL26: Using LabeledBy to Associate Labels and Targets in Silverlight</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for the use of Silverlight and we did
+                not realise it back then.</td>
+        </tr>
+        <tr>
+            <td>SL30: Using Silverlight Control Compositing and AutomationProperties.Name</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for the use of Silverlight and we did
+                not realise it back then.</td>
+        </tr>
+
+
+        <tr>
+            <td rowspan="2">Situation D</td>
+            <td colspan="2"><b>Situation D: If non-text content is time-based media (including live video-only and live
+                    audio-only); a test or exercise that would be invalid if presented in text; or primarily intended to
+                    create a specific sensory experience:</b></td>
+        </tr>
+        <tr>
+            <td colspan="2">Fail to comply in the whole situation D. Because the requirements of A1 and A2 did not ask
+                for the use of time-based media and we did not realise it back then. However, as for a online webshop,
+                audio or video media could help make the page vivid.</td>
+        </tr>
+
+
+        <tr>
+            <td rowspan="2">Situation E</td>
+            <td colspan="2"><b>Situation E: If non-text content is a CAPTCHA:</b></td>
+        </tr>
+        <tr>
+            <td colspan="2">Fail to comply in the whole situation E. Because the requirements of A1 and A2 did not ask
+                for the use of CAPTCHA and we did not realise it back then. However, as for a online webshop, a CAPTCHA
+                should get into use to verify human behaviors.</td>
+        </tr>
+
+
+        <tr>
+            <td rowspan="6">Situation F</td>
+            <td colspan="2"><b>Situation F: If the non-text content should be ignored by assistive technology:</b></td>
+        </tr>
+        <tr>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>C9: Using CSS to include decorative images</td>
+            <td>Comply. Because decorating web page in html would cause difficulties in adapting to different screens
+                and media, decorative images should be included in CSS seperately.</td>
+        </tr>
+        <tr>
+            <td>FLASH3: Marking objects in Flash so that they can be ignored by AT</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>H67: Using null alt text and no title attribute on img elements for images that AT should ignore</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>PDF4: Hiding decorative images with the Artifact tag in PDF documents</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not mention Artifact tag in PDF documents and
+                we did not realise it back then.</td>
+        </tr>
+
+
+        <tr>
+            <td colspan="3" class="grey"><b>Guideline 1.3 – Adaptable</b></td>
+        </tr>
+        <tr>
+            <td colspan="3"><b>1.3.1 Info and Relationship - Level A</b></td>
+        </tr>
+
+
+        <tr>
+            <td rowspan="13">Situation A</td>
+            <td colspan="2"><b>Situation A: The technology provides semantic structure to make information and
+                    relationships conveyed through presentation programmatically determinable:</b></td>
+        </tr>
+        <tr>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>ARIA11: Using ARIA landmarks to identify regions of a page</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>ARIA12: Using role=heading to identify headings</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>ARIA13: Using aria-labelledby to name regions and landmarks</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>ARIA16: Using aria-labelledby to provide a name for user interface controls</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>ARIA17: Using grouping roles to identify related form controls</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>ARIA20: Using the region role to identify a region of the page</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>G115: Using semantic elements to mark up structure AND H49: Using semantic markup to mark emphasized or
+                special text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>G117: Using text to convey information that is conveyed by variations in presentation of text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>G140: Separating information and structure from presentation to enable different presentations</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>ARIA24: Semantically identifying a font icon with role="img"</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                Making information and relationships conveyed through presentation programmatically determinable using
+                the following techniques:
+                <ul>
+                    <li>G138: Using semantic markup whenever color cues are used</li>
+                    <li>H51: Using table markup to present tabular information</li>
+                    <li>PDF6: Using table elements for table markup in PDF Documents</li>
+                    <li>PDF20: Using Adobe Acrobat Pro's Table Editor to repair mistagged tables</li>
+                    <li>H39: Using caption elements to associate data table captions with data tables</li>
+                    <li>FLASH31: Specifying caption text for a DataGrid</li>
+                    <li>H73: Using the summary attribute of the table element to give an overview of data tables</li>
+                    <li>FLASH23: Adding summary information to a DataGrid</li>
+                    <li>H63: Using the scope attribute to associate header cells and data cells in data tables</li>
+                    <li>H43: Using id and headers attributes to associate data cells with header cells in data tables
+                    </li>
+                    <li>FLASH21: Using the DataGrid component to associate column headers with cells</li>
+                    <li>H44: Using label elements to associate text labels with form controls</li>
+                    <li>H65: Using the title attribute to identify form controls when the label element cannot be used
+                    </li>
+                    <li>PDF10: Providing labels for interactive form controls in PDF documents</li>
+                    <li>PDF12: Providing name, role, value information for form fields in PDF documents</li>
+                    <li>FLASH32: Using auto labeling to associate text labels with form controls</li>
+                    <li>FLASH29: Setting the label property for form components</li>
+                    <li>FLASH25: Labeling a form control by setting its accessible name</li>
+                    <li>H71: Providing a description for groups of form controls using fieldset and legend elements</li>
+                    <li>SL20: Relying on Silverlight AutomationPeer Behavior to Set AutomationProperties.Name</li>
+                    <li>SL26: Using LabeledBy to Associate Labels and Targets in Silverlight</li>
+                    <li>H85: Using OPTGROUP to group OPTION elements inside a SELECT</li>
+                    <li>H48: Using ol, ul and dl for lists or groups of links</li>
+                    <li>H42: Using h1-h6 to identify headings</li>
+                    <li>PDF9: Providing headings by marking content with heading tags in PDF documents</li>
+                    <li>SCR21: Using functions of the Document Object Model (DOM) to add content to a page</li>
+                    <li>PDF11: Providing links and link text using the Link annotation and the /Link structure element
+                        in PDF documents</li>
+                    <li>PDF17: Specifying consistent page numbering for PDF documents</li>
+                    <li>PDF21: Using List tags for lists in PDF documents</li>
+                    <li>H97: Grouping related links using the nav element</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>G138: Using semantic markup whenever color cues are used</li>
+                    <li>H51: Using table markup to present tabular information</li>
+                    <li>PDF6: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>PDF20: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>H39: Using caption elements to associate data table captions with data tables</li>
+                    <li>FLASH31: Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and
+                        we did not realise it back then.</li>
+                    <li>H73: Using the summary attribute of the table element to give an overview of data tables</li>
+                    <li>FLASH23: Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and
+                        we did not realise it back then.</li>
+                    <li>H63: Using the scope attribute to associate header cells and data cells in data tables</li>
+                    <li>H43: Using id and headers attributes to associate data cells with header cells in data tables
+                    </li>
+                    <li>FLASH21: Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and
+                        we did not realise it back then.</li>
+                    <li>H44: Using label elements to associate text labels with form controls</li>
+                    <li>H65: Using the title attribute to identify form controls when the label element cannot be used
+                    </li>
+                    <li>PDF10: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>PDF12: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>FLASH32: Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and
+                        we did not realise it back then.</li>
+                    <li>FLASH29: Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and
+                        we did not realise it back then.</li>
+                    <li>FLASH25: Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and
+                        we did not realise it back then.</li>
+                    <li>H71: Providing a description for groups of form controls using fieldset and legend elements</li>
+                    <li>SL20: Fail to comply. Because the requirements of A1 and A2 did not ask for the use of
+                        Silverlight and we did not realise it back then.</li>
+                    <li>SL26: Fail to comply. Because the requirements of A1 and A2 did not ask for the use of
+                        Silverlight and we did not realise it back then.</li>
+                    <li>H85: Using OPTGROUP to group OPTION elements inside a SELECT</li>
+                    <li>H48: Using ol, ul and dl for lists or groups of links</li>
+                    <li>H42: Using h1-h6 to identify headings</li>
+                    <li>PDF9: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>SCR21: Using functions of the Document Object Model (DOM) to add content to a page</li>
+                    <li>PDF11: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>PDF17: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>PDF21: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>H97: Grouping related links using the nav element</li>
+                </ul>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td rowspan="5">Situation B</td>
+            <td colspan="2"><b>Situation B: The technology in use does NOT provide the semantic structure to make the
+                    information and relationships conveyed through presentation programmatically determinable:</b></td>
+        </tr>
+        <tr>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>G117: Using text to convey information that is conveyed by variations in presentation of text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>FLASH8: Adding a group name to the accessible name of a form control</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>
+                Making information and relationships conveyed through presentation programmatically determinable or
+                available in text using the following techniques:
+                <ul>
+                    <li>T1: Using standard text formatting conventions for paragraphs</li>
+                    <li>T2: Using standard text formatting conventions for lists</li>
+                    <li>T3: Using standard text formatting conventions for headings</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>T1: Using standard text formatting conventions for paragraphs</li>
+                    <li>T2: Using standard text formatting conventions for lists</li>
+                    <li>T3: Using standard text formatting conventions for headings</li>
+                </ul>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="3"><b>1.3.2 Meaningful Sequence - Level A</b></td>
+        </tr>
+        <tr>
+            <td rowspan="7"></td>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>G57: Ordering the content in a meaningful sequence</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                Marking sequences in the content as meaningful AND G57: Ordering the content in a meaningful sequence
+                <ul>
+                    <li>H34: Using a Unicode right-to-left mark (RLM) or left-to-right mark (LRM) to mix text direction
+                        inline</li>
+                    <li>H56: Using the dir attribute on an inline element to resolve problems with nested directional
+                        runs</li>
+                    <li>C6: Positioning content based on structural markup</li>
+                    <li>C8: Using CSS letter-spacing to control spacing within a word</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>H34: Using a Unicode right-to-left mark (RLM) or left-to-right mark (LRM) to mix text direction
+                        inline</li>
+                    <li>H56: Using the dir attribute on an inline element to resolve problems with nested directional
+                        runs</li>
+                    <li>C6: Positioning content based on structural markup</li>
+                    <li>C8: Using CSS letter-spacing to control spacing within a word</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>C27: Making the DOM order match the visual order</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>FLASH15: Using the tabIndex property to specify a logical reading order and a logical tab order in Flash
+            </td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>PDF3: Ensuring correct tab and reading order in PDF documents</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in PDF documents
+                and we did not realise it back then.</td>
+        </tr>
+        <tr>
+            <td>SL34: Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for the use of Silverlight and we did
+                not realise it back then.</td>
+        </tr>
+
+
+        <tr>
+            <td colspan="3"><b>1.3.3 Sensory Characteristics - Level A</b></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>G96: Providing textual identification of items that otherwise rely only on sensory information to be
+                understood</td>
+            <td></td>
+        </tr>
+
+
+        <tr>
+            <td colspan="3" class="grey"><b>Guideline 1.4 – Distinguishable</b></td>
+        </tr>
+        <tr>
+            <td colspan="3"><b>1.4.1 Use of Color - Level A</b></td>
+        </tr>
+        <tr>
+            <td rowspan="6">Situation A</td>
+            <td colspan="2"><b>Situation A: If the color of particular words, backgrounds, or other content is used to
+                    indicate information:</b></td>
+        </tr>
+        <tr>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>G14: Ensuring that information conveyed by color differences is also available in text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>G205: Including a text cue for colored form control labels</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>G182: Ensuring that additional visual cues are available when text color differences are used to convey
+                information</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus
+                for links or controls where color alone is used to identify them</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="4">Situation B</td>
+            <td colspan="2"><b>Situation B: If color is used within an image to convey information:</b></td>
+        </tr>
+        <tr>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>G111: Using color and pattern</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>G14: Ensuring that information conveyed by color differences is also available in text</td>
+            <td></td>
+        </tr>
+
+
+        <tr>
+            <td colspan="3"><b>1.4.2 Audio Control - Level A</b></td>
+        </tr>
+        <tr>
+            <td rowspan="8"></td>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>G60: Playing a sound that turns off automatically within three seconds</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>G170: Providing a control near the beginning of the Web page that turns off sounds that play
+                automatically</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>G171: Playing sounds only on user request</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>SL24: Using AutoPlay to Keep Silverlight Media from Playing Automatically</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for the use of Silverlight and we did
+                not realise it back then.</td>
+        </tr>
+        <tr>
+            <td>FLASH18: Providing a control to turn off sounds that play automatically in Flash</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>FLASH34: Turning off sounds that play automatically when an assistive technology is detected</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>SL3: Controlling Silverlight MediaElement Audio Volume</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for the use of Silverlight and we did
+                not realise it back then.</td>
+        </tr>
+
+
+
+        <tr>
+            <td colspan="3" class="green"><b>Principle 2 – Operable</b></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="grey"><b>Guideline 2.1 – Keyboard Accessible</b></td>
+        </tr>
+        <tr>
+            <td colspan="3"><b>2.1.1 Keyboard - Level A</b></td>
+        </tr>
+        <tr>
+            <td rowspan="5"></td>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>G202: Ensuring keyboard control for all functionality</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                Ensuring keyboard control by using one of the following techniques.
+                <ul>
+                    <li>H91: Using HTML form controls and links</li>
+                    <li>PDF3: Ensuring correct tab and reading order in PDF documents</li>
+                    <li>PDF11: Providing links and link text using the Link annotation and the /Link structure element
+                        in PDF documents</li>
+                    <li>PDF23: Providing interactive form controls in PDF documents</li>
+                    <li>SL15: Providing Keyboard Shortcuts that Work Across the Entire Silverlight Application</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>H91: Using HTML form controls and links</li>
+                    <li>PDF3: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>PDF11: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>PDF23: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>SL15: Fail to comply. Because the requirements of A1 and A2 did not ask for the use of
+                        Silverlight and we did not realise it back then.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                G90: Providing keyboard-triggered event handlers
+                <ul>
+                    <li>SCR20: Using both keyboard and other device-specific functions</li>
+                    <li>SCR35: Making actions keyboard accessible by using the onclick event of anchors and buttons</li>
+                    <li>SCR2: Using redundant keyboard and mouse event handlers</li>
+                    <li>SL9: Handling Key Events to Enable Keyboard Functionality in Silverlight</li>
+                    <li>SL14: Providing Custom Control Key Handling for Keyboard Functionality in Silverlight</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>SCR20: Using both keyboard and other device-specific functions</li>
+                    <li>SCR35: Making actions keyboard accessible by using the onclick event of anchors and buttons</li>
+                    <li>SCR2: Using redundant keyboard and mouse event handlers</li>
+                    <li>SL9: Fail to comply. Because the requirements of A1 and A2 did not ask for the use of
+                        Silverlight and we did not realise it back then.</li>
+                    <li>SL14: Fail to comply. Because the requirements of A1 and A2 did not ask for the use of
+                        Silverlight and we did not realise it back then.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                FLASH17: Providing keyboard access to a Flash object and avoiding a keyboard trap
+                <ul>
+                    <li>FLASH22: Adding keyboard-accessible actions to static elements</li>
+                    <li>FLASH16: Making actions keyboard accessible by using the click event on standard components</li>
+                    <li>FLASH14: Using redundant keyboard and mouse event handlers in Flash</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>FLASH22: Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and
+                        we did not realise it back then.</li>
+                    <li>FLASH16: Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and
+                        we did not realise it back then.</li>
+                    <li>FLASH14: Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and
+                        we did not realise it back then.</li>
+                </ul>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="3"><b>2.1.2 No Keyboard Trap - Level A</b></td>
+        </tr>
+        <tr>
+            <td rowspan="3"></td>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>G21: Ensuring that users are not trapped in content</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>FLASH17: Providing keyboard access to a Flash object and avoiding a keyboard trap</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+
+
+        <tr>
+            <td colspan="3" class="grey"><b>Guideline 2.4 – Navigable</b></td>
+        </tr>
+        <tr>
+            <td colspan="3"><b>2.4.1 Bypass Blocks - Level A</b></td>
+        </tr>
+        <tr>
+            <td rowspan="3"></td>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>
+                Creating links to skip blocks of repeated material using one of the following techniques:
+                <ul>
+                    <li>G1: Adding a link at the top of each page that goes directly to the main content area</li>
+                    <li>G123: Adding a link at the beginning of a block of repeated content to go to the end of the
+                        block</li>
+                    <li>G124: Adding links at the top of the page to each area of the content</li>
+                    <li>SL25: Using Controls and Programmatic Focus to Bypass Blocks of Content in Silverlight</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line
+                <ul>
+                    <li>G1: Adding a link at the top of each page that goes directly to the main content area</li>
+                    <li>G123: Adding a link at the beginning of a block of repeated content to go to the end of the
+                        block</li>
+                    <li>G124: Adding links at the top of the page to each area of the content</li>
+                    <li>SL25: Fail to comply. Because the requirements of A1 and A2 did not ask for the use of
+                        Silverlight and we did not realise it back then.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Grouping blocks of repeated material in a way that can be skipped, using one of the following
+                techniques:
+                <ul>
+                    <li>ARIA11: Using ARIA landmarks to identify regions of a page</li>
+                    <li>H69: Providing heading elements at the beginning of each section of content</li>
+                    <li>PDF9: Providing headings by marking content with heading tags in PDF documents</li>
+                    <li>H70: Using frame elements to group blocks of repeated material AND H64: Using the title
+                        attribute of the frame and iframe elements</li>
+                    <li>SCR28: Using an expandable and collapsible menu to bypass block of content</li>
+                    <li>SL29: Using Silverlight "List" Controls to Define Blocks that can be Bypassed</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line
+                <ul>
+                    <li>ARIA11: Using ARIA landmarks to identify regions of a page</li>
+                    <li>H69: Providing heading elements at the beginning of each section of content</li>
+                    <li>PDF9: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>H70: Using frame elements to group blocks of repeated material AND H64: Using the title
+                        attribute of the frame and iframe elements</li>
+                    <li>SCR28: Using an expandable and collapsible menu to bypass block of content</li>
+                    <li>SL29: Fail to comply. Because the requirements of A1 and A2 did not ask for the use of
+                        Silverlight and we did not realise it back then.</li>
+                </ul>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td colspan="3"><b>2.4.2 Page Titled - Level A</b></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>
+                G88: Providing descriptive titles for Web pages
+                <ul>
+                    <li>H25: Providing a title using the title element</li>
+                    <li>PDF18: Specifying the document title using the Title entry in the document information
+                        dictionary of a PDF document</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>H25: Providing a title using the title element</li>
+                    <li>PDF18: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                </ul>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="3"><b>2.4.3 Focus Order - Level A</b></td>
+        </tr>
+        <tr>
+            <td rowspan="4"></td>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>G59: Placing the interactive elements in an order that follows sequences and relationships within the
+                content</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                Giving focus to elements in an order that follows sequences and relationships within the content using
+                one of the following techniques:
+                <ul>
+                    <li>H4: Creating a logical tab order through links, form controls, and objects</li>
+                    <li>FLASH15: Using the tabIndex property to specify a logical reading order and a logical tab order
+                        in Flash</li>
+                    <li>C27: Making the DOM order match the visual order</li>
+                    <li>PDF3: Ensuring correct tab and reading order in PDF documents</li>
+                    <li>SL34: Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>H4: Creating a logical tab order through links, form controls, and objects</li>
+                    <li>FLASH15: Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and
+                        we did not realise it back then.</li>
+                    <li>C27: Making the DOM order match the visual order</li>
+                    <li>PDF3: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>SL34: Fail to comply. Because the requirements of A1 and A2 did not ask for the use of
+                        Silverlight and we did not realise it back then.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Changing a Web page dynamically using one of the following techniques:
+                <ul>
+                    <li>SCR26: Inserting dynamic content into the Document Object Model immediately following its
+                        trigger element</li>
+                    <li>SCR37: Creating Custom Dialogs in a Device Independent Way</li>
+                    <li>SCR27: Reordering page sections using the Document Object Model</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>SCR26: Inserting dynamic content into the Document Object Model immediately following its
+                        trigger element</li>
+                    <li>SCR37: Creating Custom Dialogs in a Device Independent Way</li>
+                    <li>SCR27: Reordering page sections using the Document Object Model</li>
+                </ul>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="3"><b>2.4.4 Link Purpose (In Context) - Level A</b></td>
+        </tr>
+        <tr>
+            <td rowspan="10"></td>
+            <td><b>Sufficient Techniques</b></td>
+            <td><b>Assessment</b></td>
+        </tr>
+        <tr>
+            <td>G91: Providing link text that describes the purpose of a link</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>H30: Providing link text that describes the purpose of a link for anchor elements</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>H24: Providing text alternatives for the area elements of image maps</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>FLASH27: Providing button labels that describe the purpose of a button</td>
+            <td>Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we did not realise
+                it back then.</td>
+        </tr>
+        <tr>
+            <td>
+                Allowing the user to choose short or long link text using one of the techniques below:
+                <ul>
+                    <li>G189: Providing a control near the beginning of the Web page that changes the link text</li>
+                    <li>SCR30: Using scripts to change the link text</li>
+                    <li>FLASH7: Using scripting to change control labels</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>G189: Providing a control near the beginning of the Web page that changes the link text</li>
+                    <li>SCR30: Using scripts to change the link text</li>
+                    <li>FLASH7: Fail to comply. Because the requirements of A1 and A2 did not ask for using Flash and we
+                        did not realise it back then.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>G53: Identifying the purpose of a link using link text combined with the text of the enclosing sentence
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                Providing a supplemental description of the purpose of a link using one of the following techniques:
+                <ul>
+                    <li>H33: Supplementing link text with the title attribute</li>
+                    <li>C7: Using CSS to hide a portion of the link text</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>H33: Supplementing link text with the title attribute</li>
+                    <li>C7: Using CSS to hide a portion of the link text</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Identifying the purpose of a link using link text combined with programmatically determined link context
+                using one of the following techniques:
+                <ul>
+                    <li>ARIA7: Using aria-labelledby for link purpose</li>
+                    <li>ARIA8: Using aria-label for link purpose</li>
+                    <li>H77: Identifying the purpose of a link using link text combined with its enclosing list item
+                    </li>
+                    <li>H78: Identifying the purpose of a link using link text combined with its enclosing paragraph
+                    </li>
+                    <li>H79: Identifying the purpose of a link in a data table using the link text combined with its
+                        enclosing table cell and associated table header cells</li>
+                    <li>H81: Identifying the purpose of a link in a nested list using link text combined with the parent
+                        list item under which the list is nested</li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>ARIA7: Using aria-labelledby for link purpose</li>
+                    <li>ARIA8: Using aria-label for link purpose</li>
+                    <li>H77: Identifying the purpose of a link using link text combined with its enclosing list item
+                    </li>
+                    <li>H78: Identifying the purpose of a link using link text combined with its enclosing paragraph
+                    </li>
+                    <li>H79: Identifying the purpose of a link in a data table using the link text combined with its
+                        enclosing table cell and associated table header cells</li>
+                    <li>H81: Identifying the purpose of a link in a nested list using link text combined with the parent
+                        list item under which the list is nested</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                G91: Providing link text that describes the purpose of a link
+                <ul>
+                    <li>PDF11: Providing links and link text using the Link annotation and the /Link structure element
+                        in PDF documents</li>
+                    <li>PDF13: Providing replacement text using the /Alt entry for links in PDF documents</li>
+                    <li>SL18: Providing Text Equivalent for Nontext Silverlight Controls With AutomationProperties.Name
+                    </li>
+                </ul>
+            </td>
+            <td>
+                Assess line by line:
+                <ul>
+                    <li>PDF11: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>PDF13: Fail to comply. Because the requirements of A1 and A2 did not ask for using attributes in
+                        PDF documents and we did not realise it back then.</li>
+                    <li>SL18: Fail to comply. Because the requirements of A1 and A2 did not ask for the use of
+                        Silverlight and we did not realise it back then.</li>
+                </ul>
+            </td>
+        </tr>
+
+
+
+    </table>-->
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "webshop",
+  "version": "1.0.0",
+  "description": "Assignment 3 by Lab 66 for Web Techonology Course ",
+  "main": "server.js",
+  "scripts": {
+    "test": "test_server",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "assignment3"
+  ],
+  "author": "Yu Chen, Changyu Nie",
+  "license": "ISC",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "express": "^4.17.1",
+    "npm": "^6.13.6",
+    "sqlite3": "^4.1.1"
+  }
+}

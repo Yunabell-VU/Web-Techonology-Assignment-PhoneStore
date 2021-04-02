@@ -1,0 +1,126 @@
+@media print {
+    /* General */
+    * {
+        margin: 0;
+    }
+    @page {
+        margin: 2cm;
+    }
+    /* format: font, color, background, margin */
+    body {
+        font: 13pt Georgia, serif;
+        background: #ffffff;
+        color: #000000;
+    }
+    h1 {
+        font-size: 24pt;
+    }
+    h2 {
+        font-size: 14pt;
+        margin-top: 25px;
+    }
+    /*page break*/
+    a {
+        page-break-inside: avoid;
+    }
+    h1, h2 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+    img {
+        page-break-inside: avoid;
+    }
+    table, pre {
+        page-break-before: avoid;
+        page-break-inside: avoid;
+    }
+    ul, ol, dl {
+        page-break-before: avoid;
+    }
+    /*specific adjustment*/
+    #logo {
+        margin-left: 35%;
+        font-size: 50px;
+        font-family: monospace;
+    }
+    .search_bar, nav {
+        display: none;
+    }
+    .ranking_list ol {
+        padding-left: 30pt;
+    }
+    .slides_show {
+        margin-top: 30px;
+    }
+    input[name="r"] {
+        position: absolute;
+        visibility: hidden;
+    }
+    .slide img {
+        width: 500px;
+        margin-left: 10%;
+    }
+    #hot_sellings {
+        page-break-before: always;
+    }
+    .best-selling caption {
+        text-align: left;
+        padding-top: 10pt;
+    }
+    .topselling_content td {
+        border: 1px solid gray;
+        text-align: center;
+    }
+    .topselling_content img {
+        width: 100pt;
+        height: 100pt;
+        widows:5;
+    }
+    #formInput, #ajaxReset,#ajaxSubmit{
+        visibility: hidden;
+    }
+    .sale_banner {
+        font-size: 24pt;
+        font-weight: bold;
+        page-break-before: always;
+    }
+    .sales table {
+        text-align: center;
+    }
+    .sales td {
+        border: 2pt solid gray;
+    }
+    .sales td img {
+        height: 150px;
+    }
+    .sales td h1 {
+        padding: 10px;
+        font: normal 13px Arial, Helvetica;
+    }
+    .sales td h2 {
+        font-variant: small-caps;
+        font-style: italic;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .services {
+        margin-top: 30px;
+    }
+    .service_title {
+        display: none;
+    }
+    .service_content dl dt {
+        font-weight: bold;
+        padding-top: 6%;
+    }
+    footer {
+        page-break-before: always;
+    }
+    #compatibility h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .orphans {
+        orphans: 2;
+    }
+}
